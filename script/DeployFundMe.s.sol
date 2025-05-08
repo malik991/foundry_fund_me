@@ -15,7 +15,7 @@ contract FundMeScript is Script {
         address ethUsdPriceFeed = helperConfig.activeNetworkConfig();
 
         vm.startBroadcast();
-        //FundMe fundMe = new FundMe(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        //FundMe fundMe = new FundMe(0x694AA1769357215DE4FAC081bf1f309aDC325306); // hard
         FundMe fundMe = new FundMe(ethUsdPriceFeed);
         console.log("FundMe deployed to: ", address(fundMe));
         vm.stopBroadcast();
